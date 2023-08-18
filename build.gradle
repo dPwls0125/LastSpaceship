@@ -36,6 +36,15 @@ dependencies {
 	runtimeOnly 'io.jsonwebtoken:jjwt-impl:0.11.5'
 	implementation 'io.jsonwebtoken:jjwt-jackson:0.11.5'
 }
+// 스프링 부트 플러그인 설정
+springBoot {
+	buildInfo()
+}
+// JAR 파일명 설정
+jar {
+	archiveBaseName = project.name
+	archiveVersion = project.version
+}
 
 tasks.named('test') {
 	useJUnitPlatform()

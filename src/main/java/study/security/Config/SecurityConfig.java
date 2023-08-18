@@ -45,7 +45,6 @@ public class SecurityConfig {
 
                 .apply(new JwtSecurityConfig(tokenProvider));
 
-
         return http.build();
     }
     @Bean
